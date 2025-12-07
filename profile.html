@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="profile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/logoo.png" width="90" alt="logo">
+            <span>SkillNex</span>
+        </div>
+
+        <div class="menu">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="mycourse.html">My Course</a>
+            <a href="message.html">Message</a>
+            <a href="community.html">Community</a>
+            <a href="forum.html">Forum</a>
+            <a href="livechat.html">Live Chat</a>
+            <a href="payment.html">Payment</a>
+            <a href="profile.html"class=active>Profile</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a class="active">Home</a>
+        <a>About</a>
+        <a>Log In</a>
+    </div>
+
+  <main class="main-content">
+    <div class="profile-header">
+      <div class="profile-pic-wrapper">
+        <div class="profile-pic">
+          <img src="assets/willi.jpg" alt="Willyam Tanu Wijaya">
+          <div class="status-indicator online"></div>
+        </div>
+        <button class="btn-upload">
+          <span class="icon">📷</span>
+          Upload New Photo
+        </button>
+      </div>
+      
+      <div class="profile-summary">
+        <div class="profile-name-section">
+          <h1>Willyam Tanu Wijaya</h1>
+          <span class="verified-badge">✓ Verified</span>
+        </div>
+        <p class="profile-tagline">Programming Enthusiast | Tech Explorer</p>
+        
+        <div class="profile-stats">
+          <div class="stat-item">
+            <span class="stat-number">12</span>
+            <span class="stat-label">Courses</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">85%</span>
+            <span class="stat-label">Completion</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">4.8</span>
+            <span class="stat-label">Rating</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <section class="card contact-card">
+        <div class="card-header">
+          <h3>
+            <span class="icon">📧</span>
+            Contact Information
+          </h3>
+          <button class="edit-btn">
+            <span class="icon">✏️</span>
+            Edit
+          </button>
+        </div>
+        
+        <div class="info-list">
+          <div class="info-item">
+            <span class="info-label">Email</span>
+            <span class="info-value">Williaja@Gmail.com</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Phone</span>
+            <span class="info-value">+62 852 4285 0976</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Joined</span>
+            <span class="info-value">January 2024</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h3>
+            <span class="icon">📍</span>
+            Address & Location
+          </h3>
+        </div>
+        
+        <div class="info-list">
+          <div class="info-item">
+            <span class="info-label">Address</span>
+            <span class="info-value">Jln. Pembangunan No.1, Padang Bulan</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">City</span>
+            <span class="info-value">Medan, North Sumatra</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Gender</span>
+            <span class="info-value">Male</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="card skills-card">
+      <div class="card-header">
+        <h3>
+          <span class="icon">🎯</span>
+          Skills & Expertise
+        </h3>
+        <button class="edit-btn">
+          <span class="icon">✏️</span>
+          Edit
+        </button>
+      </div>
+      
+      <div class="skills-grid">
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Programming</span>
+            <span class="skill-percentage">90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Web Development</span>
+            <span class="skill-percentage">85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 85%"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Problem Solving</span>
+            <span class="skill-percentage">88%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 88%"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Database Management</span>
+            <span class="skill-percentage">75%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="two-col-grid">
+      <section class="card bio-card">
+        <div class="card-header">
+          <h3>
+            <span class="icon">✍️</span>
+            Bio
+          </h3>
+          <button class="edit-btn">
+            <span class="icon">✏️</span>
+            Edit
+          </button>
+        </div>
+        
+        <p class="bio-text">
+          Passionate programmer with a strong interest in web development and problem-solving. 
+          Always eager to learn new technologies and contribute to innovative projects.
+        </p>
+      </section>
+
+      <section class="card achievements-card">
+        <div class="card-header">
+          <h3>
+            <span class="icon">🏆</span>
+            Achievements
+          </h3>
+        </div>
+        
+        <div class="achievements-grid">
+          <div class="achievement-badge">
+            <span class="achievement-icon">🎓</span>
+            <span class="achievement-name">Fast Learner</span>
+          </div>
+          <div class="achievement-badge">
+            <span class="achievement-icon">⭐</span>
+            <span class="achievement-name">Top Rated</span>
+          </div>
+          <div class="achievement-badge">
+            <span class="achievement-icon">🔥</span>
+            <span class="achievement-name">30 Day Streak</span>
+          </div>
+          <div class="achievement-badge">
+            <span class="achievement-icon">💎</span>
+            <span class="achievement-name">Premium Member</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="two-col-grid">
+      <section class="card activity-card">
+        <div class="card-header">
+          <h3>
+            <span class="icon">📈</span>
+            Recent Activity
+          </h3>
+        </div>
+        
+        <div class="activity-list">
+          <div class="activity-item">
+            <span class="activity-dot"></span>
+            <div class="activity-content">
+              <p class="activity-text">Completed "Advanced JavaScript" course</p>
+              <span class="activity-time">2 days ago</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <span class="activity-dot"></span>
+            <div class="activity-content">
+              <p class="activity-text">Earned "Fast Learner" badge</p>
+              <span class="activity-time">5 days ago</span>
+            </div>
+          </div>
+          <div class="activity-item">
+            <span class="activity-dot"></span>
+            <div class="activity-content">
+              <p class="activity-text">Started "React Fundamentals" course</p>
+              <span class="activity-time">1 week ago</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card location-card">
+        <div class="card-header">
+          <h3>
+            <span class="icon">🌍</span>
+            Update Location
+          </h3>
+        </div>
+        
+        <div class="location-input-group">
+          <input type="text" placeholder="Enter your location..." value="Medan, Indonesia">
+          <button class="btn-save">
+            <span class="icon">💾</span>
+            Save
+          </button>
+        </div>
+        
+        <div class="location-map-placeholder">
+          <span class="map-icon">🗺️</span>
+          <p>Map view coming soon</p>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Chat - SkillNex</title>
+  <link rel="stylesheet" href="livechat.css">
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo">
+      <img src="assets/logoo.png" alt="SkillNex Logo">
+      <span>SkillNex</span>
+    </div>
+
+    <div class="menu">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="mycourse.html">My Course</a>
+      <a href="message.html">Message</a>
+      <a href="community.html">Community</a>
+      <a href="forum.html">Forum</a>
+      <a href="livechat.html"class="active">Live Chat</a>
+      <a href="payment.html">Payment</a>
+      <a href="profile.html">Profile</a>
+    </div>
+  </div>
+
+  <div class="navbar">
+    <a class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="login.html">Log In</a>
+  </div>
+
+  <main class="main">
+    <h1 class="page-title">Global Live Chat</h1>
+    <section class="chat-window">
+      <div class="message-list">
+        <div class="msg">
+          <div class="avatar">
+            <img src="assets/sultan.jpg" alt="sultan">
+          </div>
+          <div class="bubble">
+            <div class="username">sultan</div>
+            halo semuanya 😍😍
+          </div>
+        </div>
+
+        <div class="msg">
+          <div class="avatar">
+            <img src="assets/ivana.jpg" alt="Ivana">
+          </div>
+          <div class="bubble">
+            <div class="username">ivana_KS</div>
+            Keren bet
+          </div>
+        </div>
+
+        <div class="msg">
+          <div class="avatar">
+            <img src="assets/ferlita.jpg" alt="ferlita">
+          </div>
+          <div class="bubble">
+            <div class="username">princes_komA</div>
+            wows
+          </div>
+        </div>
+
+        <div class="msg">
+          <div class="avatar">
+            <img src="assets/ririn.jpg" alt="Ririn">
+          </div>
+          <div class="bubble">
+            <div class="username">ririn_10</div>
+            Halo
+          </div>
+        </div>
+
+        <div class="msg">
+          <div class="avatar">
+            <img src="assets/dhe.jpg" alt="Dhea">
+          </div>
+          <div class="bubble">
+            <div class="username">dhetrlv</div>
+            yayayayayayaya
+          </div>
+        </div>
+
+        <div class="msg">
+          <div class="avatar">
+            <img src="assets/tegar.jpg" alt="Tegar">
+          </div>
+          <div class="bubble bubble-emoji">
+            <div class="emoji-user">Tegar</div>
+            <div class="emoji-large">😍</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="input-row">
+      <div class="input-wrap">
+        <input type="text" id="chatInput" placeholder="Ketik Disini...">
+        <div class="emoji-btn">😊</div>
+      </div>
+      <button class="send-btn" onclick="sendMessage()">Kirim</button>
+    </div>
+
+  </main>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('chatInput');
+      const message = input.value.trim();
+      
+      if (message) {
+        const messageList = document.querySelector('.message-list');
+        const newMsg = document.createElement('div');
+        newMsg.className = 'msg';
+        newMsg.innerHTML = `
+          <div class="avatar">
+            <img src="https://i.pravatar.cc/42?img=0" alt="You">
+          </div>
+          <div class="bubble">
+            <div class="username">You</div>
+            ${message}
+          </div>
+        `;
+        messageList.appendChild(newMsg);
+        const chatWindow = document.querySelector('.chat-window');
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+        input.value = '';
+      }
+    }
+
+    document.getElementById('chatInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+  </script>
+</body>
+</html>

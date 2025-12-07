@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: #f1f1f1;
+  padding-left: 180px;
+  padding-top: 60px;
+  min-height: 100vh;
+}
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 180px;
+  background: #0f2239;
+  color: white;
+  padding: 30px 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+
+.logo span {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.sidebar .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  line-height: 2.3;
+}
+
+.sidebar .menu a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  display: block;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sidebar .menu a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar .menu a.active {
+  background: white;
+  color: #0f2239;
+  font-weight: 600;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  font-size: 12px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.navbar {
+  position: fixed;
+  left: 180px;
+  top: 0;
+  right: 0;
+  background: #0f2239;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  transition: border-bottom 0.3s;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.navbar a.active {
+  border-bottom: 2px solid white;
+  font-weight: 600;
+}
+
+.container {
+    margin-left: 50px;    
+    margin-right: auto;
+    width: 95%;
+    max-width: 100%;
+    display: block;
+}
+
+.search {
+    width: 60%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.add-card {
+    padding: 12px 20px;
+    margin-left: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.bill-card {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.img-box {
+    width: 55px;
+    height: 55px;
+    background: #dedede;
+    border-radius: 10px;
+}
+
+.right {
+    text-align: right;
+}
+
+.pay-btn {
+    background: #0d243c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+.section-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.method-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.method-card button {
+    margin-top: 10px;
+    padding: 6px 15px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.history-card {
+    margin-top: 20px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.status {
+    padding: 6px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.success {
+    background: #d8f5d8;
+    color: #0f8a29;
+}

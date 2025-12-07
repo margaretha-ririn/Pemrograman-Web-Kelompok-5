@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: #f1f1f1;
+  padding-left: 180px;
+  padding-top: 60px;
+  min-height: 100vh;
+}
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 180px;
+  background: #0f2239;
+  color: white;
+  padding: 30px 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+
+.logo span {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.sidebar .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  line-height: 2.3;
+}
+
+.sidebar .menu a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  display: block;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sidebar .menu a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar .menu a.active {
+  background: white;
+  color: #0f2239;
+  font-weight: 600;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  font-size: 12px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  left: 180px;
+  top: 0;
+  right: 0;
+  background: #0f2239;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  transition: border-bottom 0.3s;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.navbar a.active {
+  border-bottom: 2px solid white;
+  font-weight: 600;
+}
+
+.container {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    width: calc(100% - 20px);
+    padding: 50px;
+}
+
+.search-bar {
+    width: 70%;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 20px;
+    border: 1px solid #d0d0d0;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.search-bar:focus {
+    border-color: #4a6fa5;
+    box-shadow: 0 0 6px rgba(74, 111, 165, 0.3);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-card {
+    width: 50%;
+    background: #d4e0f1;
+    padding: 15px !important;
+    margin-top: 10px !important;
+    border-radius: 12px;
+    display: flex;
+    gap: 10px !important;
+}
+
+
+.intro-card .intro-text {
+    color: #0f2239; 
+    font-size: 14px;
+}
+
+.intro-card img {
+    width: 80px;
+    margin-right: 5px;
+}
+
+.intro-text {
+    width: 72%;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.calendar-card {
+    width: 35%;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
+}
+
+.calendar-card table {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.calendar-card td {
+    padding: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calendar-card td:hover {
+    background: #e6eefc;
+    border-radius: 6px;
+}
+
+.calendar-card .selected {
+    background: #5087ff !important;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f2239;
+    margin-top: 20px !important;
+    margin-bottom: 5px !important;
+}
+
+
+.mentor-list img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    border: 3px solid #4a6fa5;
+    margin-right: 15px;
+    transition: 0.2s;
+}
+
+.mentor-list img:hover {
+    transform: scale(1.05);
+}
+
+.skill-card {
+    background: #d6e8f0;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: 0.2s;
+    width: 30%;
+    margin-right: 10px !important;
+    padding: 10px !important;
+}
+
+.skill-card:hover {
+    transform: translateY(-3px);
+}
+
+.skill-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.skill-card p {
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.45;
+}
+
+.schedule {
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #333;
+}
