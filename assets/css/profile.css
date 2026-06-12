@@ -1,0 +1,263 @@
+/* profile.css — JANGAN definisikan body, sidebar, navbar di sini */
+
+.main-content {
+  margin-left: 180px;
+  margin-top: 56px;
+  padding: 28px;
+  min-height: calc(100vh - 56px);
+  box-sizing: border-box;
+}
+
+.profile-header {
+  background: linear-gradient(135deg, #0f2239 0%, #1e3a5f 70%, #2d5a8e 100%);
+  color: white;
+  padding: 32px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.07);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.profile-pic-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.profile-pic { position: relative; }
+
+.profile-pic img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255,255,255,0.25);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.profile-pic:hover img { transform: scale(1.04); }
+
+.status-indicator {
+  position: absolute;
+  bottom: 10px; right: 10px;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 3px solid #0f2239;
+}
+.status-indicator.online { background: #2ecc71; }
+
+.photo-actions { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+
+.btn-upload {
+  background: #2d5a8e;
+  color: white;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+.btn-upload:hover { background: #5b9cf5; transform: translateY(-2px); }
+
+.btn-delete-photo {
+  background: rgba(229,57,53,0.15);
+  color: #ef5350;
+  padding: 7px 16px;
+  border: 1px solid rgba(229,57,53,0.4);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s;
+}
+.btn-delete-photo:hover { background: rgba(229,57,53,0.3); border-color: #ef5350; }
+
+.profile-summary { flex: 1; }
+
+.profile-name-section { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.profile-name-section h1 { font-size: 30px; color: #ffffff; font-weight: 700; }
+
+.verified-badge {
+  background: rgba(91,156,245,0.15);
+  color: #5b9cf5;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid rgba(91,156,245,0.3);
+}
+
+.profile-tagline { color: rgba(255,255,255,0.65); font-size: 15px; margin-bottom: 22px; }
+.profile-stats { display: flex; gap: 36px; }
+.stat-item { display: flex; flex-direction: column; gap: 3px; }
+.stat-number { font-size: 26px; font-weight: 700; color: #5b9cf5; }
+.stat-label { font-size: 12px; color: rgba(255,255,255,0.55); font-weight: 500; }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.two-col-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #0f2239;
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: all 0.25s ease;
+  animation: slideUp 0.5s ease;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: white;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(0,0,0,0.35); border-color: rgba(45,90,142,0.6); }
+
+.skills-card { margin-bottom: 20px; }
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.card-header h3 { font-size: 16px; color: #ffffff; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+
+.edit-btn {
+  background: rgba(45,90,142,0.4);
+  border: 1px solid #2d5a8e;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  color: #5b9cf5;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s;
+}
+.edit-btn:hover { background: #2d5a8e; }
+
+.info-list { display: flex; flex-direction: column; gap: 18px; }
+.info-item { display: flex; flex-direction: column; gap: 5px; }
+.info-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.6px; }
+.info-value { font-size: 14px; color: rgba(255,255,255,0.85); font-weight: 500; }
+
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.skill-item { display: flex; flex-direction: column; gap: 8px; }
+.skill-header { display: flex; justify-content: space-between; align-items: center; }
+.skill-name { font-size: 13px; font-weight: 600; color: #fff; }
+.skill-percentage { font-size: 13px; font-weight: 600; color: #5b9cf5; }
+
+.skill-bar { height: 8px; background: rgba(255,255,255,0.08); border-radius: 10px; overflow: hidden; }
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #5b9cf5, #667eea);
+  border-radius: 10px;
+  transition: width 1s ease;
+  position: relative;
+  overflow: hidden;
+}
+.skill-progress::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  animation: shimmer 2s infinite;
+}
+@keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+
+.bio-text { color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.8; }
+
+.achievements-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.achievement-badge {
+  background: rgba(30,58,95,0.6); padding: 14px; border-radius: 12px;
+  display: flex; flex-direction: column; align-items: center; gap: 7px;
+  transition: all 0.25s; border: 1px solid rgba(45,90,142,0.4);
+}
+.achievement-badge:hover { border-color: #5b9cf5; transform: translateY(-3px); }
+.achievement-icon { font-size: 28px; }
+.achievement-name { font-size: 11px; font-weight: 600; color: #5b9cf5; text-align: center; }
+
+.activity-list { display: flex; flex-direction: column; gap: 18px; }
+.activity-item { display: flex; gap: 14px; position: relative; }
+.activity-item:not(:last-child)::after {
+  content: ''; position: absolute; left: 7px; top: 22px; bottom: -18px;
+  width: 2px; background: rgba(45,90,142,0.5);
+}
+.activity-dot { width: 16px; height: 16px; border-radius: 50%; background: #5b9cf5; flex-shrink: 0; margin-top: 3px; }
+.activity-content { flex: 1; }
+.activity-text { font-size: 13px; color: rgba(255,255,255,0.8); font-weight: 500; margin-bottom: 3px; }
+.activity-time { font-size: 11px; color: rgba(255,255,255,0.35); }
+
+.alert-success { background: rgba(26,71,49,0.8); color: #6fcf97; padding: 14px 18px; border-radius: 10px; margin-bottom: 20px; border-left: 4px solid #27ae60; font-size: 14px; font-weight: 500; }
+.alert-error { background: rgba(74,21,21,0.8); color: #eb5757; padding: 14px 18px; border-radius: 10px; margin-bottom: 20px; border-left: 4px solid #e53e3e; font-size: 14px; font-weight: 500; }
+
+.form-input {
+  width: 100%; padding: 11px 16px; border: 1.5px solid #2d5a8e; border-radius: 10px;
+  font-size: 13px; font-family: inherit; background: #1e3a5f; color: #ffffff; margin-top: 6px; transition: all 0.25s;
+}
+.form-input::placeholder { color: rgba(255,255,255,0.3); }
+.form-input:focus { outline: none; border-color: #5b9cf5; box-shadow: 0 0 0 3px rgba(91,156,245,0.12); }
+.form-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.5px; }
+.form-group { margin-bottom: 14px; }
+
+.btn-primary {
+  background: linear-gradient(135deg, #2d5a8e, #5b9cf5);
+  color: white; padding: 11px 22px; border: none; border-radius: 10px;
+  cursor: pointer; font-size: 14px; font-weight: 600; font-family: inherit; transition: all 0.25s; margin-top: 6px;
+}
+.btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+
+.modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); z-index: 2000; justify-content: center; align-items: center; }
+.modal-overlay.active { display: flex; }
+.modal-box { background: #0f2239; border: 1px solid #2d5a8e; border-radius: 16px; padding: 30px; width: 90%; max-width: 450px; color: white; }
+.modal-box h3 { margin-bottom: 20px; font-size: 18px; color: #fff; }
+.modal-close { float: right; background: none; border: none; color: rgba(255,255,255,0.5); font-size: 22px; cursor: pointer; margin-top: -5px; }
+
+@media (max-width: 1024px) {
+  .container, .two-col-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .main-content { margin-left: 0; width: 100%; padding: 20px; }
+  .profile-header { flex-direction: column; text-align: center; }
+  .profile-stats { justify-content: center; }
+}

@@ -1,0 +1,195 @@
+/* =============================================
+   SIDEBAR.CSS — Dipakai semua halaman SkillNex
+   ============================================= */
+.navbar-user {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: white;
+}
+
+.navbar-photo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== GLOBAL BODY — satu tempat, berlaku semua ===== */
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: #0a1829;
+  min-height: 100vh;
+  /* JANGAN tambah padding-left/top di sini — tiap halaman atur sendiri via margin */
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 180px;
+  background: #0f2239;
+  color: white;
+  padding: 20px 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px 20px 20px;
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.logo span {
+  font-weight: 700;
+  font-size: 17px;
+  color: white;
+}
+
+.sidebar .menu {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0;
+}
+
+/* GANTI DENGAN INI */
+.sidebar .menu a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  display: block;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s;
+  /* HAPUS border-left dari sini */
+}
+
+.sidebar .menu a:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: white;
+}
+
+.sidebar .menu a.active {
+  background: white;
+  color: #0f2239;
+  font-weight: 600;
+  /* HAPUS border-left dari sini juga */
+}
+
+.sidebar .menu a:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: white;
+}
+
+.sidebar .menu a.active {
+  background: white;
+  color: #0f2239;
+  font-weight: 600;
+  border-left: 3px solid #0f2239;
+}
+
+.logout-btn {
+  display: block;
+  margin: 16px 18px;
+  padding: 10px 16px;
+  background: #e53935;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.2s;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.logout-btn:hover {
+  background: #c62828;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  left: 180px;
+  top: 0;
+  right: 0;
+  background: #0f2239;
+  color: white;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  z-index: 999;
+  height: 56px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  padding-bottom: 2px;
+  transition: all 0.2s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.navbar a.active {
+  font-weight: 600;
+}
+
+.navbar-user {
+  margin-left: auto;
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  font-size: 12px;
+  opacity: 0.7;
+  text-align: center;
+  padding: 10px;
+}

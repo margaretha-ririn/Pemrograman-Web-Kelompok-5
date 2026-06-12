@@ -1,0 +1,171 @@
+/* ========================================================
+   mycourse.css — SkillNex My Course Page Styles
+   ======================================================== */
+body,
+.content,
+.main,
+.container,
+.main-content {
+  background: #ffffff !important;
+}
+
+.content {
+  padding-top: 42px;
+}
+.content {
+  margin-left: var(--sidebar-w, 200px);
+  margin-top: var(--navbar-h, 58px);
+  padding: 26px 28px;
+  min-height: calc(100vh - var(--navbar-h, 58px));
+  background: #ffffff;
+}
+
+/* ─── SEARCH BAR ─────────────────────────────────────── */
+.search-top {
+  margin-bottom: 20px;
+}
+
+.search-box {
+  width: 340px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1.5px solid var(--navy-border, #1e3a5f);
+  background: var(--navy-light, #1a3a5c);
+  color: #fff; font-family: inherit; font-size: 13.5px;
+  outline: none; transition: border-color .25s;
+}
+.search-box::placeholder { color: rgba(255,255,255,.35); }
+.search-box:focus { border-color: #5b9cf5; }
+
+/* ─── TABS ───────────────────────────────────────────── */
+.tabs {
+  background: var(--navy-mid, #0f2239);
+  padding: 12px 14px;
+  border-radius: 14px;
+  display: flex; gap: 10px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+.tabs button {
+  padding: 10px 24px;
+  font-size: 14px; font-family: inherit;
+  border: 1.5px solid var(--navy-border, #1e3a5f);
+  border-radius: 10px; cursor: pointer;
+  background: transparent; color: rgba(255,255,255,.5);
+  font-weight: 500; transition: all .25s;
+}
+.tabs button:hover {
+  background: rgba(77,158,245,.08);
+  color: #5b9cf5; border-color: rgba(77,158,245,.3);
+}
+.tabs button.active {
+  background: #fff; color: var(--navy-mid, #0f2239);
+  font-weight: 700; border-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+}
+
+/* ─── COURSE CARD ────────────────────────────────────── */
+.course-card {
+  background: var(--navy-mid, #0f2239);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 16px; padding: 18px 22px;
+  margin-bottom: 14px; display: flex;
+  justify-content: space-between; align-items: center;
+  transition: all .25s;
+  color: white
+}
+.course-card:hover {
+  border-color: rgba(77,158,245,.25);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.3);
+}
+
+.course-info { display: flex; gap: 16px; align-items: center; }
+
+.course-info img {
+  width: 70px; height: 70px;
+  border-radius: 12px; object-fit: cover;
+  background: var(--navy-light, #1a3a5c); flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,.07);
+}
+
+.course-details p { margin: 3px 0; font-size: 13px; color: rgba(255,255,255,.7); }
+.course-details p strong { color: #fff; font-size: 14.5px; }
+
+.progress-container { width: 180px; }
+.progress-container .progress-wrap { background: rgba(255,255,255,.08); height: 7px; border-radius: 99px; overflow: hidden; }
+.progress-container .progress-fill { background: linear-gradient(90deg, #4d9ef5, #7c5ff5); }
+
+.progress-wrapper { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+
+.btn-update-progress {
+  background: none; border: 1px solid rgba(77,158,245,.35); color: #5b9cf5;
+  padding: 4px 11px; border-radius: 6px; font-size: 11.5px;
+  cursor: pointer; font-family: inherit; white-space: nowrap; transition: all .2s;
+}
+.btn-update-progress:hover { background: #5b9cf5; color: #fff; }
+
+.badge-selesai {
+  display: inline-block;
+  background: rgba(29,158,117,.12); color: #6fcf97;
+  border: 1px solid rgba(29,158,117,.25);
+  padding: 3px 11px; border-radius: 99px;
+  font-size: 11px; font-weight: 700;
+}
+
+/* ─── CHAT BUTTON ────────────────────────────────────── */
+.chat-btn {
+  background: linear-gradient(135deg, #4d9ef5, #7c5ff5);
+  color: #fff; border: none; padding: 10px 22px;
+  border-radius: 10px; font-weight: 700; font-family: inherit;
+  font-size: 13.5px; cursor: pointer; transition: all .25s;
+  box-shadow: 0 4px 14px rgba(77,158,245,.3);
+}
+.chat-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(77,158,245,.45); }
+.chat-btn-self { opacity: .4; cursor: not-allowed !important; box-shadow: none; }
+.chat-btn-link { text-decoration: none; }
+
+/* ─── EMPTY STATE ────────────────────────────────────── */
+.empty-state {
+  text-align: center; padding: 50px 20px; color: var(--text-muted, #5e7491);
+  background: var(--navy-mid, #0f2239); border-radius: 16px;
+  border: 1px dashed rgba(77,158,245,.2); margin-top: 14px;
+}
+.empty-state .empty-icon { font-size: 44px; margin-bottom: 14px; display: block; }
+
+/* ─── MODAL PROGRESS ─────────────────────────────────── */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.75); z-index: 2000; justify-content: center; align-items: center; backdrop-filter: blur(4px); }
+.modal-overlay.active { display: flex; }
+.modal-box {
+  background: var(--navy-mid, #0f2239); border: 1px solid var(--navy-hover, #2d5a8e);
+  border-radius: 20px; padding: 32px; width: 90%; max-width: 380px; color: #fff;
+  box-shadow: 0 20px 60px rgba(0,0,0,.5); animation: modalIn .25s ease;
+}
+@keyframes modalIn { from{opacity:0;transform:translateY(-14px)} to{opacity:1;transform:translateY(0)} }
+.modal-box h3 { margin-bottom: 22px; font-size: 17px; font-weight: 700; }
+.modal-close { float: right; background: none; border: none; color: var(--text-muted,#5e7491); font-size: 22px; cursor: pointer; }
+
+.range-label { text-align: center; font-size: 32px; font-weight: 700; color: #5b9cf5; margin-bottom: 16px; font-family: 'Sora', sans-serif; }
+.range-input {
+  width: 100%; margin: 12px 0 20px;
+  accent-color: #4d9ef5; cursor: pointer;
+  height: 6px; border-radius: 99px;
+}
+.btn-simpan {
+  width: 100%; padding: 13px; border: none; border-radius: 11px;
+  background: linear-gradient(135deg, #4d9ef5, #7c5ff5);
+  color: #fff; font-weight: 700; font-size: 15px; cursor: pointer;
+  font-family: inherit; box-shadow: 0 4px 16px rgba(77,158,245,.35);
+  transition: all .25s;
+}
+.btn-simpan:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(77,158,245,.5); }
+
+/* ─── TAB CONTENT ────────────────────────────────────── */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ─── NEXT SESSION ───────────────────────────────────── */
+.next-session-info { text-align: right; }
+.next-session-info strong { display: block; font-size: 12.5px; color: rgba(255,255,255,.7); margin-bottom: 4px; }
+.next-session-info span { font-size: 13.5px; color: #fff; font-weight: 600; }
